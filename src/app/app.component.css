@@ -1,0 +1,23 @@
+
+h1 {
+    text-align: center;
+       
+    
+}
+
+router-outlet {
+    display: block;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    router-outlet {
+        width: 90%;
+    }
+}

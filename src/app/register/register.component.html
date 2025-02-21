@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Register</h2>
+    
+    <form #registerForm="ngForm" (ngSubmit)="register()">
+      <input type="text" placeholder="Name" [(ngModel)]="user.name" name="name" required />
+      <input type="email" placeholder="Email" [(ngModel)]="user.email" name="email" required />
+      <input type="password" placeholder="Password" [(ngModel)]="user.password" name="password" required />
+      <input type="text" placeholder="Company Name" [(ngModel)]="user.companyName" name="companyName" required />
+      <input type="number" placeholder="Age" [(ngModel)]="user.age" name="age" required />
+      <input type="date" placeholder="Date of Birth" [(ngModel)]="user.dob" name="dob" required />
+      <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+      <input type="text" placeholder="Phone Number" [(ngModel)]="user.phoneNumber" name="phoneNumber" required />
+      
+      <button type="submit" [disabled]="registerForm.invalid">Register</button>
+    </form>
+  
+    <p>{{ message }}</p>
+  
+    <p>Already have an account?</p>
+    <a routerLink="/login">Login here</a>
+  </div>
+  
+  

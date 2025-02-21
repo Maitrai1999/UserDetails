@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email" [(ngModel)]="credentials.email" required />
+    <input type="password" placeholder="Password" [(ngModel)]="credentials.password" required />
+    <button (click)="login()">Login</button>
+
+    <div *ngIf="showOtpField">
+      <input type="text" placeholder="Enter OTP" [(ngModel)]="otp" required />
+      <button (click)="verifyOtp()">Verify OTP</button>
+    </div>
+
+   <p>{{ message }}</p>
+   <p>If you don't have an account,
+    <button routerLink="/register">Sign Up</button></p>
+</div>
